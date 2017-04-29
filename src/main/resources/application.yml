@@ -1,0 +1,39 @@
+server:
+  port: 28080
+info:
+  easyframe:
+    description: EasyFrame Demo Project
+    url: https://github.com/easyframe/demo
+    build-by: linzhaoming
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: easyframe-demo
+  profiles:
+    active: dev
+
+# 开发(dev)环境
+---
+spring:
+  profiles: dev
+logging:
+  level:
+    org.springframework.cloud.commons.util.InetUtils: TRACE
+
+# 测试(test)环境
+---
+spring:
+  profiles: test
+
+# 准发布(staging)环境
+---
+spring:
+  profiles: staging
+
+# 生产(prod)环境
+---
+spring:
+  profiles: prod

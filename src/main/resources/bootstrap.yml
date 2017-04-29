@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        enabled: false
+  cloud:
+    config:
+      enabled: false
+      label: develop
+    inetutils:
+      preferred-networks:
+        - 10.0
+        - 10.1
+        - 192.168
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    metadata-map:
+      cluster: EASYFRAME-DEMO
+netflix:
+  atlas:
+    uri: http://localhost:7101
+
+# 开发(dev)环境
+---
+spring:
+  profiles: dev
+
+# 测试(test)环境
+---
+spring:
+  profiles: test
+
+# 准发布(staging)环境
+---
+spring:
+  profiles: staging
+
+# 生产(prod)环境
+---
+spring:
+  profiles: prod
