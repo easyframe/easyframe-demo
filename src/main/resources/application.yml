@@ -2,8 +2,8 @@ server:
   port: 28080
 info:
   easyframe:
-    description: EasyFrame Demo Project
-    url: https://github.com/easyframe/demo
+    description: EasyFrame-Demo
+    url: https://github.com/easyframe/easyframe-demo
     build-by: linzhaoming
 management:
   security:
