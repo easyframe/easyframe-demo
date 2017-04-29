@@ -148,7 +148,6 @@
         </plugins>
     </build>
 
-    <!-- Maven仓库定义 -->
     <distributionManagement>
         <repository>
             <id>releases-wenwen</id>
