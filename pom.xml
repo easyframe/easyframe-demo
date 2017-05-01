@@ -46,17 +46,20 @@
         <project.build.locale>zh_CN</project.build.locale>
 
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-        <easyframe.version>1.0.0-RC7</easyframe.version>
+        <easyframe.version>1.0.0-RC1</easyframe.version>
         <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
         <maven-surefire-report-plugin.version>2.20</maven-surefire-report-plugin.version>
         <git-commit-id-plugin.version>2.2.2</git-commit-id-plugin.version>
         <springloaded.version>1.2.7.RELEASE</springloaded.version>
+
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github</groupId>
+                <groupId>io.github.easyframe</groupId>
                 <artifactId>easyframe-dependency</artifactId>
                 <version>${easyframe.version}</version>
                 <type>pom</type>
@@ -144,6 +147,25 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
