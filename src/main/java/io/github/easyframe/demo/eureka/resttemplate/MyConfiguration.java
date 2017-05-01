@@ -1,4 +1,4 @@
-package com.easyframe.demo.eureka.resttemplate;
+package io.github.easyframe.demo.eureka.resttemplate;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

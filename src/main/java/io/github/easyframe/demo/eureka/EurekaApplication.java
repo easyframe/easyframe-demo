@@ -1,4 +1,4 @@
-package com.easyframe.demo.eureka;
+package io.github.easyframe.demo.eureka;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
