@@ -9,8 +9,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * Use RestTemplate to autocongiure using load balance Ribbon
  *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 @Configuration
 public class MyConfiguration {

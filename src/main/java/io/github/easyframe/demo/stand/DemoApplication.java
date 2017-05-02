@@ -14,8 +14,7 @@ import java.util.Date;
 /**
  * Demo Server: default url is http://localhost:28080
  *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 @SpringBootApplication
 @RestController

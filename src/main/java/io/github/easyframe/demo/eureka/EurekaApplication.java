@@ -16,8 +16,7 @@ import java.util.List;
 
 /**
  *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author: linzhaoming
  */
 @SpringBootApplication
 @RestController
