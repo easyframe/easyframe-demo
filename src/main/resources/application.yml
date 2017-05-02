@@ -15,7 +15,7 @@ spring:
   profiles:
     active: dev
 
-# 开发(dev)环境
+# [dev] Environment
 ---
 spring:
   profiles: dev
@@ -23,17 +23,17 @@ logging:
   level:
     org.springframework.cloud.commons.util.InetUtils: TRACE
 
-# 测试(test)环境
+# [test] Environment
 ---
 spring:
   profiles: test
 
-# 准发布(staging)环境
+# [staging] Environment
 ---
 spring:
   profiles: staging
 
-# 生产(prod)环境
+# [prod] Environment
 ---
 spring:
   profiles: prod
