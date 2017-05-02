@@ -46,7 +46,7 @@ public class DemoApplication {
     }
 
     @GetMapping("/test3")
-    public String test3(){
+    public String test3() {
         return "test3: linzm=" + environment.getProperty("linzm");
     }
 

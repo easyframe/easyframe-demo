@@ -5,7 +5,6 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.client.RestTemplate;
 
 /**
- *
  * @author linzhaoming
  */
 public class MyClass {
