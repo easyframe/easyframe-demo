@@ -1,19 +1,1 @@
 language: java
-
-jdk:
-  - oraclejdk8
-
-services:
-  - docker
-
-install:
-  - mvn clean install
-  - docker build -t easyframe/easyframe-demo .
-  - docker run -d -p 127.0.0.1:28080:28080 --name demo demo
-
-script:
-  - docker ps | grep -q demo
-
-branches:
-  only:
-    - develop
