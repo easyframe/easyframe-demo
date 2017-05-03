@@ -1,4 +1,4 @@
-= easyframe-demo
+= easyframe-demo image:https://travis-ci.org/easyframe/easyframe-demo.svg?branch=develop[Status]
 
 Demo Project for easyframe
 
