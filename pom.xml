@@ -21,6 +21,8 @@
     </licenses>
     <scm>
         <url>https://github.com/easyframe/easyframe-demo</url>
+        <connection>scm:git:git://github.com/easyframe/easyframe-demo.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/easyframe/easyframe-demo.git</developerConnection>
     </scm>
     <developers>
         <developer>
