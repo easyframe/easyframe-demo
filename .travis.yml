@@ -12,7 +12,7 @@ script:
   - docker build -t easyframe/easyframe-demo .
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_BRANCH" == "develop" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push easyframe/easyframe-demo;
     fi

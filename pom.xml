@@ -140,7 +140,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>io.github.demo.stand.DemoApplication</mainClass>
+                    <mainClass>io.github.easyframe.demo.stand.DemoApplication</mainClass>
                     <classifier>exec</classifier>
                     <executable>true</executable>
                 </configuration>
