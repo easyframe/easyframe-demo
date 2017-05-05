@@ -7,22 +7,21 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * RestTemplate可自动配置为使用负载均衡Ribbon
+ * Use RestTemplate to autocongiure using load balance Ribbon
  *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 @Configuration
 public class MyConfiguration {
 
-    //使用负载均衡的RestTemplate
+    //RestTemplate using load balance
     @LoadBalanced
     @Bean
     RestTemplate loadBalanced() {
         return new RestTemplate();
     }
 
-    //普通的RestTemplate
+    //Normal RestTemplate
     @Primary
     @Bean
     RestTemplate restTemplate() {

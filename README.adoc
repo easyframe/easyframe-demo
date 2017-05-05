@@ -1,12 +1,20 @@
-= Demo
+= easyframe-demo
 
-Demo Project for easyframe
+easyframe: Demo Project
+
+Travis CI: image:https://travis-ci.org/easyframe/easyframe-demo.svg?branch=develop[Status, link=https://travis-ci.org/easyframe/easyframe-demo]
 
 == Features
 
 * Demo
 
 == Installation
+
+=== Run with standalone Docker
+
+ docker run -p 28080:28080 easyframe/easyframe-demo
+
+==  Run With Sources
 
 === Prerequisites
 

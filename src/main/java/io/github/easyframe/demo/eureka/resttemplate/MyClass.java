@@ -5,9 +5,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.client.RestTemplate;
 
 /**
- *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 public class MyClass {
     @Autowired

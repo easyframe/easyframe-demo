@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
+ * Demo Server: default url is http://localhost:28080
  *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 @SpringBootApplication
 @RestController
@@ -46,7 +46,7 @@ public class DemoApplication {
     }
 
     @GetMapping("/test3")
-    public String test3(){
+    public String test3() {
         return "test3: linzm=" + environment.getProperty("linzm");
     }
 

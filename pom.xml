@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.easyframe</groupId>
     <artifactId>easyframe-demo</artifactId>
-    <version>master-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <description>EasyFrame-Demo</description>
@@ -36,9 +35,6 @@
             </roles>
         </developer>
     </developers>
-    <prerequisites>
-        <maven>3.2.1</maven>
-    </prerequisites>
 
     <properties>
         <argLine>-Dfile.encoding=UTF-8</argLine>
@@ -48,7 +44,7 @@
         <project.build.locale>zh_CN</project.build.locale>
 
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-        <easyframe.version>1.0.0-RC1</easyframe.version>
+        <easyframe.version>1.0.0</easyframe.version>
         <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
         <maven-surefire-report-plugin.version>2.20</maven-surefire-report-plugin.version>
         <git-commit-id-plugin.version>2.2.2</git-commit-id-plugin.version>
@@ -56,6 +52,11 @@
 
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -102,7 +103,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>io.github.demo.stand.DemoApplication</mainClass>
+                    <mainClass>io.github.easyframe.demo.stand.DemoApplication</mainClass>
                     <classifier>exec</classifier>
                     <executable>true</executable>
                 </configuration>
@@ -173,15 +174,13 @@
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>releases-wenwen</id>
-            <name>Local Nexus Repository</name>
-            <url>http://www.wenwenkj.com:8081/nexus/content/repositories/releases/</url>
-        </repository>
         <snapshotRepository>
-            <id>snapshots-wenwen</id>
-            <name>Local Nexus Repository</name>
-            <url>http://www.wenwenkj.com:8081/nexus/content/repositories/snapshots</url>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-releases</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
     </distributionManagement>
 </project>

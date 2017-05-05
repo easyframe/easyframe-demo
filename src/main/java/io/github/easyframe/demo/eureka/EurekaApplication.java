@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- *
- * @Date: 2017-01-06
- * @Author: linzhaoming
+ * @author linzhaoming
  */
 @SpringBootApplication
 @RestController
@@ -43,17 +41,17 @@ public class EurekaApplication {
 
     @GetMapping("/service")
     public String serviceUrl() {
-        System.out.println(eurekaClient.getAllKnownRegions());
-        System.out.println(eurekaClient.getApplications());
+        log.info("", eurekaClient.getAllKnownRegions());
+        log.info("", eurekaClient.getApplications());
         InstanceInfo instance = eurekaClient.getNextServerFromEureka("easyframe-demo".toUpperCase(), false);
         return instance.getHomePageUrl();
     }
 
     @GetMapping("/service2")
     public String serviceUrl2() {
-        System.out.println("services: " + discoveryClient.getServices());
+        log.info("services: ", discoveryClient.getServices());
         List<ServiceInstance> list = discoveryClient.getInstances("easyframe-demo".toUpperCase());
-        if (list != null && list.size() > 0) {
+        if (!list.isEmpty()) {
             return list.get(0).getUri().toString();
         }
         return null;
