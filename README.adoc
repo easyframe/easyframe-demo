@@ -10,6 +10,12 @@ Travis CI: image:https://travis-ci.org/easyframe/easyframe-demo.svg?branch=devel
 
 == Installation
 
+=== Run with standalone Docker
+
+ docker run -p 28080:28080 easyframe/easyframe-demo
+
+==  Run With Sources
+
 === Prerequisites
 
 * Java: 1.8
