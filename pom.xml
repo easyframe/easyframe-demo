@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.easyframe</groupId>
     <artifactId>easyframe-demo</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>master-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <description>EasyFrame-Demo</description>
