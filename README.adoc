@@ -2,7 +2,7 @@
 
 easyframe: Demo Project
 
-Travis CI: image:https://travis-ci.org/easyframe/easyframe-demo.svg?branch=develop[Status, link=https://travis-ci.org/easyframe/easyframe-demo]
+Travis CI: image:https://travis-ci.org/easyframe/easyframe-demo.svg?branch=master[Status, link=https://travis-ci.org/easyframe/easyframe-demo]
 
 == Features
 
