@@ -9,6 +9,7 @@ jdk:
   - oraclejdk8
 
 script:
+  - mvnw clean package
   - docker build -t easyframe/easyframe-demo .
 
 after_success:
