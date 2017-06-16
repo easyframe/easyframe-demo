@@ -44,8 +44,8 @@
         <project.build.locale>zh_CN</project.build.locale>
 
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-        <easyframe.version>1.0.0</easyframe.version>
-        <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
+        <easyframe.version>1.0.1</easyframe.version>
+        <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
         <maven-surefire-report-plugin.version>2.20</maven-surefire-report-plugin.version>
         <git-commit-id-plugin.version>2.2.2</git-commit-id-plugin.version>
         <springloaded.version>1.2.7.RELEASE</springloaded.version>
@@ -166,6 +166,27 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <!--<version>${jacoco-maven-plugin.version}</version>-->
+                <executions>
+                    <execution>
+                        <id>JaCoCo Agent</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>JaCoCo Report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
@@ -174,13 +195,16 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-releases</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>releases-dataman</id>
+            <name>Local Nexus Repository</name>
+            <url>http://192.168.31.21:8081/nexus/content/repositories/releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots-dataman</id>
+            <name>Local Nexus Repository</name>
+            <url>http://192.168.31.21:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
+
 </project>
